@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="termsVM" type="com.example.wprintapp.modules.terms.data.viewmodel.TermsVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearTerms"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageArrowleft"
+            android:layout_height="@dimen/_27pxh"
+            android:layout_marginBottom="@dimen/_728pxv"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_43pxv"
+            android:layout_width="@dimen/_15pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrowleft"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtTermAndCondition"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_726pxv"
+            android:layout_marginEnd="@dimen/_34pxh"
+            android:layout_marginStart="@dimen/_18pxh"
+            android:layout_marginTop="@dimen/_43pxv"
+            android:layout_weight="0.94" android:layout_width="0dp"
+            android:singleLine="true"
+            android:text="@{termsVM.termsModel.txtTermAndCondition}"
+            style="@style/txtMontserratromansemibold24" tools:text="@string/msg_terms_and_condi"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="printOptionsVM" type="com.example.wprintapp.modules.printoptions.data.viewmodel.PrintOptionsVM"/>
+    </data>
+
+    <FrameLayout
+        android:id="@+id/framePrintOptions"
+        style="@style/groupStylewhite_A700"
+        android:layout_width="match_parent"
+        android:layout_height="863dp">
+
+        <LinearLayout
+            android:id="@+id/linearColumnarrowleft"
+            android:layout_width="match_parent"
+            android:layout_height="861dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_40pxv"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                app:contentInsetStart="0dp">
+
+                <LinearLayout
+                    android:id="@+id/linearRowarrowleft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageArrowleft"
+                        android:layout_width="@dimen/_15pxh"
+                        android:layout_height="@dimen/_27pxh"
+                        android:layout_marginBottom="@dimen/_4pxv"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrowleft" />
+
+                    <TextView
+                        android:id="@+id/txtPrintOptions"
+                        style="@style/txtMontserratromansemibold24"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_60pxh"
+                        android:layout_marginTop="@dimen/_2pxv"
+                        android:layout_weight="0.91"
+                        android:ellipsize="end"
+                        android:lineSpacingExtra="@dimen/_6pxh"
+                        android:singleLine="true"
+                        android:text="@{printOptionsVM.printOptionsModel.txtPrintOptions}"
+                        tools:text="@string/lbl_print_options" />
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:id="@+id/linearColumnprinterselecte"
+                style="@style/groupStylecornerRadius_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_23pxv"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtPrinterSelecte"
+                    style="@style/txtInterregular18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_26pxh"
+                    android:layout_marginTop="@dimen/_22pxv"
+                    android:layout_marginEnd="@dimen/_26pxh"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@{printOptionsVM.printOptionsModel.txtPrinterSelecte}"
+                    tools:text="@string/msg_printer_selecte" />
+
+                <EditText
+                    android:id="@+id/etFrameTwentySix"
+                    style="@style/etRoundedOutline_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_14pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:background="@drawable/rectangle_border_deep_purple_500_radius_10"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_canon_pixma"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/_13pxh"
+                    android:paddingTop="@dimen/_14pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:singleLine="true"
+                    android:text="@={printOptionsVM.printOptionsModel.etFrameTwentySixValue}"
+                    android:textColorHint="@color/black_900"
+                    tools:ignore="Autofill" />
+
+                <View
+                    android:id="@+id/lineLineSeven"
+                    android:layout_width="@dimen/_305pxh"
+                    android:layout_height="@dimen/_1pxv"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_31pxv"
+                    android:layout_marginEnd="@dimen/_8pxh"
+                    android:background="@color/black_900" />
+
+                <LinearLayout
+                    android:id="@+id/linearColumncopies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginBottom="@dimen/_123pxv"
+                    android:gravity="start"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linearRowcopies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtCopies"
+                            style="@style/txtInterregular14_1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_1pxv"
+                            android:layout_marginBottom="@dimen/_9pxv"
+                            android:layout_weight="0.23"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="@{printOptionsVM.printOptionsModel.txtCopies}"
+                            tools:text="@string/lbl_copies" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnOne"
+                            style="@style/btnRoundedOutline_1"
+                            android:layout_width="@dimen/_43pxh"
+                            android:layout_height="@dimen/_47pxh"
+                            android:layout_marginStart="@dimen/_13pxh"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:paddingStart="@dimen/_18pxh"
+                            android:paddingTop="@dimen/_1pxv"
+                            android:paddingEnd="@dimen/_19pxh"
+                            android:paddingBottom="@dimen/_15pxv"
+                            android:singleLine="true"
+                            android:text="@string/lbl_1"
+                            android:textAllCaps="false"
+                            tools:text="@string/lbl_1" />
+
+                        <TextView
+                            android:id="@+id/txtDuplexMode"
+                            style="@style/txtInterregular14_1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_31pxh"
+                            android:layout_marginTop="@dimen/_1pxv"
+                            android:layout_marginBottom="@dimen/_7pxv"
+                            android:layout_weight="0.23"
+                            android:text="@{printOptionsVM.printOptionsModel.txtDuplexMode}"
+                            tools:text="@string/lbl_duplex_mode" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/switchMaterialGroupOne"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16pxh"
+                            android:layout_marginTop="@dimen/_8pxv"
+                            android:layout_marginBottom="@dimen/_5pxv"
+                            android:layout_weight="0.34" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearRowpaperorientati"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_21pxv"
+                        android:layout_marginEnd="@dimen/_1pxh"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtPaperOrientati"
+                            style="@style/txtInterregular14_1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_1pxv"
+                            android:layout_marginBottom="@dimen/_6pxv"
+                            android:layout_weight="0.33"
+                            android:text="@{printOptionsVM.printOptionsModel.txtPaperOrientati}"
+                            tools:text="@string/msg_paper_orientati" />
+
+                        <EditText
+                            android:id="@+id/etOrientationDro"
+                            style="@style/etSolidRoundedOutline_3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_39pxh"
+                            android:layout_weight="0.67"
+                            android:background="@drawable/rectangle_bg_white_a700_border_bluegray_101_radius_10"
+                            android:ellipsize="end"
+                            android:hint="@string/lbl_portrait"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10pxh"
+                            android:paddingTop="@dimen/_13pxv"
+                            android:paddingEnd="@dimen/_30pxh"
+                            android:paddingBottom="@dimen/_15pxv"
+                            android:singleLine="true"
+                            android:text="@={printOptionsVM.printOptionsModel.etOrientationDroValue}"
+                            android:textColorHint="@color/black_900"
+                            tools:ignore="Autofill" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearRowpapersize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_21pxv"
+                        android:layout_marginEnd="@dimen/_3pxh"
+                        android:gravity="start"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtPaperSize"
+                            style="@style/txtInterregular14_1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_1pxv"
+                            android:layout_marginBottom="@dimen/_14pxv"
+                            android:layout_weight="0.32"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="@{printOptionsVM.printOptionsModel.txtPaperSize}"
+                            tools:text="@string/lbl_paper_size" />
+
+                        <TextView
+                            android:id="@+id/txtPaperSizeOne"
+                            style="@style/txtSolidRoundedOutline"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_40pxh"
+                            android:layout_weight="0.68"
+                            android:ellipsize="end"
+                            android:paddingStart="@dimen/_10pxh"
+                            android:paddingTop="@dimen/_14pxv"
+                            android:paddingBottom="@dimen/_14pxv"
+                            android:singleLine="true"
+                            android:text="@{printOptionsVM.printOptionsModel.txtPaperSizeOne}"
+                            tools:text="@string/lbl_a4" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearRowprintoutcolor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_1pxh"
+                        android:layout_marginTop="@dimen/_23pxv"
+                        android:layout_marginEnd="@dimen/_3pxh"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtPrintoutColor"
+                            style="@style/txtInterregular14_1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_1pxv"
+                            android:layout_marginBottom="@dimen/_15pxv"
+                            android:layout_weight="0.38"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="@{printOptionsVM.printOptionsModel.txtPrintoutColor}"
+                            tools:text="@string/lbl_printout_color" />
+
+                        <EditText
+                            android:id="@+id/etColor"
+                            style="@style/etSolidRoundedOutline_3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_17pxh"
+                            android:layout_weight="0.62"
+                            android:background="@drawable/rectangle_bg_white_a700_border_bluegray_101_radius_10"
+                            android:ellipsize="end"
+                            android:hint="@string/lbl_colored"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10pxh"
+                            android:paddingTop="@dimen/_14pxv"
+                            android:paddingEnd="@dimen/_30pxh"
+                            android:paddingBottom="@dimen/_14pxv"
+                            android:singleLine="true"
+                            android:text="@={printOptionsVM.printOptionsModel.etColorValue}"
+                            android:textColorHint="@color/black_900"
+                            tools:ignore="Autofill" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSavePrintOptions"
+                style="@style/btnSolidRoundedOutline_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4pxh"
+                android:layout_marginTop="@dimen/_69pxv"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_15pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_15pxv"
+                android:singleLine="true"
+                android:text="@string/msg_save_print_opti"
+                android:textAllCaps="false"
+                tools:text="@string/msg_save_print_opti" />
+        </LinearLayout>
+    </FrameLayout>
+</layout>

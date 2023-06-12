@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="historyVM" type="com.example.wprintapp.modules.history.data.viewmodel.HistoryVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearHistory"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_41pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumnprinthistory"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_19pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtPrintHistory"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_55pxh"
+                android:layout_marginStart="@dimen/_58pxh"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{historyVM.historyModel.txtPrintHistory}"
+                style="@style/txtMontserratromansemibold32" tools:text="@string/lbl_print_history"/>
+            <TextView android:gravity="left"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_1pxh"
+                android:layout_marginTop="@dimen/_21pxv"
+                android:layout_width="match_parent"
+                android:lineSpacingExtra="@dimen/_8pxh"
+                android:text="@{historyVM.historyModel.txtDescription}"
+                style="@style/txtMontserratromanregular14" tools:text="@string/msg_all_print_jobs"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/recyclerHistory"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_1pxh"
+                android:layout_marginTop="@dimen/_30pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_25pxh}" tools:itemCount="1" tools:listitem="@layout/row_history"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

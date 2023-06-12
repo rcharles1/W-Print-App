@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="neabrySettingsVM" type="com.example.wprintapp.modules.neabrysettings.data.viewmodel.NearbySettingsVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearNeabrySettings"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumn"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_27pxv"
+            android:layout_marginEnd="@dimen/_15pxh"
+            android:layout_marginStart="@dimen/_15pxh"
+            android:layout_marginTop="@dimen/_30pxv"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylecornerRadius_1">
+
+            <LinearLayout
+                android:id="@+id/linearColumnnearbydetails"
+                style="@style/groupStylewhite_1"
+                android:layout_width="match_parent"
+                android:layout_height="254dp"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNearbyDetails"
+                    style="@style/txtIntermedium16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_9pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@{neabrySettingsVM.neabrySettingsModel.txtNearbyDetails}"
+                    tools:text="@string/lbl_nearby_details" />
+
+                <View
+                    android:id="@+id/lineLineSeventeen"
+                    android:layout_width="@dimen/_290pxh"
+                    android:layout_height="@dimen/_1pxv"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_6pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:background="@color/bluegray_100" />
+
+                <EditText
+                    android:id="@+id/etInteractiveInp"
+                    style="@style/etRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_8pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:background="@drawable/rectangle_border_black_900_radius_10"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_wlan_name_ssid"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/_22pxh"
+                    android:paddingTop="@dimen/_23pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_14pxv"
+                    android:singleLine="true"
+                    android:text="@={neabrySettingsVM.neabrySettingsModel.etInteractiveInpValue}"
+                    android:textColorHint="@color/black_900_a5"
+                    tools:ignore="Autofill" />
+
+                <EditText
+                    android:id="@+id/etInteractiveInpOne"
+                    style="@style/etRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_8pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:background="@drawable/rectangle_border_black_900_radius_10"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_password"
+                    android:inputType="textPassword"
+                    android:paddingStart="@dimen/_22pxh"
+                    android:paddingTop="@dimen/_21pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:singleLine="true"
+                    android:text="@={neabrySettingsVM.neabrySettingsModel.etInteractiveInpOneValue}"
+                    android:textColorHint="@color/black_900_a5"
+                    tools:ignore="Autofill" />
+
+                <ImageView
+                    android:id="@+id/imageCheckmark"
+                    android:layout_width="@dimen/_22pxh"
+                    android:layout_height="@dimen/_22pxh"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="@dimen/_20pxh"
+                    android:layout_marginTop="@dimen/_15pxv"
+                    android:layout_marginEnd="@dimen/_20pxh"
+                    android:layout_marginBottom="@dimen/_11pxv"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_checkmark"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_checkmark" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

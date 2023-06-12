@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="paymentStatusDisplayVM" type="com.example.wprintapp.modules.paymentstatusdisplay.data.viewmodel.PaymentStatusDisplayVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearPaymentStatus"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageArrowleft"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_27pxh"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_28pxv"
+            android:layout_width="@dimen/_15pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrowleft"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+        <FrameLayout android:id="@+id/frameStackhttpslottief"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_125pxv"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_258pxv"
+            android:layout_width="@dimen/_125pxh" style="@style/groupStylecornerRadius_1">
+            <ImageView android:id="@+id/imageHttpslottief"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_125pxh"
+                android:layout_width="@dimen/_125pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_10pxh}"
+                imageRes="@{@drawable/img_httpslottief}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_httpslottief"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

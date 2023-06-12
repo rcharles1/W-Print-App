@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="paymentStatusSuccessVM" type="com.example.wprintapp.modules.paymentstatussuccess.data.viewmodel.PaymentStatusSuccessVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearPaymentStatus"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegreen_100">
+        <FrameLayout android:id="@+id/frameStacklanguage"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_165pxv"
+            android:layout_marginEnd="@dimen/_51pxh"
+            android:layout_marginStart="@dimen/_51pxh"
+            android:layout_marginTop="@dimen/_226pxv" android:layout_width="@dimen/_257pxh">
+            <FrameLayout android:id="@+id/frameStackhttpslottief"
+                android:layout_gravity="top|center"
+                android:layout_height="@dimen/_150pxv"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:layout_marginEnd="@dimen/_53pxh"
+                android:layout_marginStart="@dimen/_53pxh"
+                android:layout_width="@dimen/_150pxh" style="@style/groupStylecornerRadius_1">
+                <ImageView android:id="@+id/imageHttpslottief"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_150pxh"
+                    android:layout_width="@dimen/_150pxh"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_10pxh}"
+                    imageRes="@{@drawable/img_httpslottief_150x150}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_httpslottief_150x150"/>
+            </FrameLayout>
+            <TextView android:ellipsize="end"
+                android:gravity="top|start"
+                android:id="@+id/txtLanguage"
+                android:layout_gravity="bottom|start"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{paymentStatusSuccessVM.paymentStatusSuccessModel.txtLanguage}"
+                style="@style/txtMontserratromansemibold24_1" tools:text="@string/msg_payment_success"/>
+        </FrameLayout>
+        <FrameLayout android:id="@+id/frameStackprintjobstatu"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_43pxv"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_51pxh"
+            android:layout_marginStart="@dimen/_51pxh"
+            android:layout_marginTop="@dimen/_27pxv" android:layout_width="@dimen/_192pxh">
+            <LinearLayout android:id="@+id/linearColumnprintjobstatu"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5pxh"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylewhite_8">
+                <TextView android:ellipsize="end"
+                    android:gravity="start"
+                    android:id="@+id/txtPrintJobStatu"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_12pxv"
+                    android:layout_marginEnd="@dimen/_17pxh"
+                    android:layout_marginStart="@dimen/_17pxh"
+                    android:layout_marginTop="@dimen/_11pxv"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:singleLine="true"
+                    android:text="@{paymentStatusSuccessVM.paymentStatusSuccessModel.txtPrintJobStatu}"
+                    style="@style/txtMontserratromansemibold15" tools:text="@string/msg_print_job_statu"/>
+            </LinearLayout>
+            <ImageButton
+                android:background="@drawable/rectangle_bg_green_600_radius_tr_10_br_10"
+                android:id="@+id/btnArrowright"
+                android:layout_gravity="end"
+                android:layout_height="@dimen/_43pxh"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_width="@dimen/_42pxh"
+                android:paddingHorizontal="@dimen/_12pxh"
+                android:paddingVertical="@dimen/_12pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_arrowright_white_a700" tools:ignore="ContentDescription"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

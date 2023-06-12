@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="splashScreenEndVM" type="com.example.wprintapp.modules.splashscreenend.data.viewmodel.SplashScreenEndVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearSplashscreene"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageLogoSampleThirteen"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_222pxh"
+            android:layout_marginEnd="@dimen/_58pxh"
+            android:layout_marginStart="@dimen/_58pxh"
+            android:layout_marginTop="@dimen/_289pxv"
+            android:layout_width="@dimen/_244pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_logosample12}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_logosample12" android:elevation="4dp"/>
+        <carbon.widget.TextView android:ellipsize="end" android:id="@+id/txtWPrint"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:textSize="32sp"
+            android:fontFamily="@font/montserratromanbold"
+            android:textColor="@color/deep_purple_500"
+            android:layout_marginEnd="@dimen/_58pxh"
+            android:layout_marginStart="@dimen/_58pxh"
+            android:layout_marginTop="@dimen/_224pxv"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_1pxh"
+            android:singleLine="true"
+            app:carbon_elevation="@dimen/_10pxv"
+            app:carbon_cornerRadius="10dp"
+            app:carbon_elevationShadowColor="@color/bg_shadow"
+            android:text="@{splashScreenEndVM.splashScreenEndModel.txtWPrint}"
+            style="@style/txt" tools:text="@string/lbl_w_print"/>
+    </LinearLayout>
+</layout>

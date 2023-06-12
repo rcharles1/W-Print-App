@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="homeVM" type="com.example.wprintapp.modules.home.data.viewmodel.HomeVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearHome"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_39pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+
+        <LinearLayout
+            android:id="@+id/linearColumnhome"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_29pxh"
+            android:layout_marginEnd="@dimen/_29pxh"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtHome"
+                style="@style/txtMontserratromansemibold32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@{homeVM.homeModel.txtHome}"
+                tools:text="@string/lbl_home" />
+
+            <TextView
+                android:id="@+id/txtSelectafilet"
+                style="@style/txtMontserratromanmedium18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_37pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:gravity="start"
+                android:singleLine="true"
+                android:text="@{homeVM.homeModel.txtSelectafilet}"
+                tools:text="@string/msg_select_a_file_t" />
+
+            <FrameLayout
+                android:id="@+id/frameStackvector"
+                android:layout_width="@dimen/_300pxh"
+                android:layout_height="@dimen/_210pxv"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_28pxv">
+
+                <ImageView
+                    android:id="@+id/imageVector"
+                    android:layout_width="@dimen/_79pxh"
+                    android:layout_height="@dimen/_101pxh"
+                    android:layout_gravity="top|start"
+                    android:layout_marginStart="@dimen/_103pxh"
+                    android:layout_marginTop="@dimen/_38pxv"
+                    android:layout_marginEnd="@dimen/_103pxh"
+                    android:layout_marginBottom="@dimen/_38pxv"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector_black_900_101x79"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_vector_black_900_101x79" />
+
+                <LinearLayout
+                    android:id="@+id/linearColumndocument"
+                    style="@style/groupStyledeep_purple_500_7fcornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtDocument"
+                        style="@style/txtMontserratromanmedium18"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_106pxh"
+                        android:layout_marginTop="@dimen/_164pxv"
+                        android:layout_marginEnd="@dimen/_94pxh"
+                        android:layout_marginBottom="@dimen/_23pxv"
+                        android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:singleLine="true"
+                        android:text="@{homeVM.homeModel.txtDocument}"
+                        tools:text="@string/lbl_document" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameStackvectorOne"
+                android:layout_width="@dimen/_300pxh"
+                android:layout_height="@dimen/_210pxv"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_23pxv">
+
+                <ImageView
+                    android:id="@+id/imageVectorOne"
+                    android:layout_width="@dimen/_79pxh"
+                    android:layout_height="@dimen/_66pxh"
+                    android:layout_gravity="top|center"
+                    android:layout_marginStart="@dimen/_110pxh"
+                    android:layout_marginTop="@dimen/_50pxv"
+                    android:layout_marginEnd="@dimen/_110pxh"
+                    android:layout_marginBottom="@dimen/_50pxv"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_vector_black_900"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_vector_black_900" />
+
+                <LinearLayout
+                    android:id="@+id/linearColumnpictures"
+                    style="@style/groupStyledeep_purple_500_7fcornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtPictures"
+                        style="@style/txtMontserratromanmedium18"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_110pxh"
+                        android:layout_marginTop="@dimen/_159pxv"
+                        android:layout_marginEnd="@dimen/_110pxh"
+                        android:layout_marginBottom="@dimen/_28pxv"
+                        android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:singleLine="true"
+                        android:text="@{homeVM.homeModel.txtPictures}"
+                        tools:text="@string/lbl_pictures" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

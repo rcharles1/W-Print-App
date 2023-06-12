@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "675963769004",
+    "project_id": "w-print",
+    "storage_bucket": "w-print.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675963769004:android:88a92c171fe1722dfecf09",
+        "android_client_info": {
+          "package_name": "com.example.wprintapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675963769004-puqoton81d7kr6df8r0akjggm484avke.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB77JBXsZDBIq2fbh2cLOE2N2LrrE7gdDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675963769004-puqoton81d7kr6df8r0akjggm484avke.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="printerRegistrationVM" type="com.example.wprintapp.modules.printerregistration.data.viewmodel.PrinterRegistrationVM"/>
+    </data>
+    <FrameLayout android:id="@+id/framePrinterRegistr"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+
+        <LinearLayout
+            android:id="@+id/linearColumnarrowleft"
+            android:layout_width="match_parent"
+            android:layout_height="925dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_13pxh"
+            android:layout_marginTop="@dimen/_40pxv"
+            android:layout_marginEnd="@dimen/_12pxh"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                app:contentInsetStart="0dp">
+
+                <LinearLayout
+                    android:id="@+id/linearRowarrowleft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageArrowleft"
+                        android:layout_width="@dimen/_15pxh"
+                        android:layout_height="@dimen/_27pxh"
+                        android:layout_marginBottom="@dimen/_5pxv"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_arrowleft" />
+
+                    <TextView
+                        android:id="@+id/txtRegisterPrinte"
+                        style="@style/txtIntersemibold24"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_52pxh"
+                        android:layout_marginTop="@dimen/_2pxv"
+                        android:layout_weight="0.92"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{printerRegistrationVM.printerRegistrationModel.txtRegisterPrinte}"
+                        tools:text="@string/msg_register_printe" />
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <TextView
+                android:id="@+id/txtPrinterDetails"
+                style="@style/txtMontserratromanmedium16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_marginTop="@dimen/_23pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@{printerRegistrationVM.printerRegistrationModel.txtPrinterDetails}"
+                tools:text="@string/lbl_printer_details" />
+
+            <LinearLayout
+                android:id="@+id/linearColumninteractiveinp"
+                style="@style/groupStylecornerRadius_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:gravity="start"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etInteractiveInp"
+                    style="@style/etRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_15pxv"
+                    android:layout_marginEnd="@dimen/_7pxh"
+                    android:background="@drawable/rectangle_border_black_900_radius_10"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_name"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/_22pxh"
+                    android:paddingTop="@dimen/_22pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_19pxv"
+                    android:singleLine="true"
+                    android:text="@={printerRegistrationVM.printerRegistrationModel.etInteractiveInpValue}"
+                    android:textColorHint="@color/black_900_a5"
+                    tools:ignore="Autofill" />
+
+                <EditText
+                    android:id="@+id/etLanguage"
+                    style="@style/etRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_15pxv"
+                    android:layout_marginEnd="@dimen/_7pxh"
+                    android:background="@drawable/rectangle_border_black_900_radius_10"
+                    android:ellipsize="end"
+                    android:hint="@string/msg_location_addres"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/_22pxh"
+                    android:paddingTop="@dimen/_21pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_20pxv"
+                    android:singleLine="true"
+                    android:text="@={printerRegistrationVM.printerRegistrationModel.etLanguageValue}"
+                    android:textColorHint="@color/black_900_a5"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/txtCategory"
+                    style="@style/txtMontserratromanmedium14_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@{printerRegistrationVM.printerRegistrationModel.txtCategory}"
+                    tools:text="@string/lbl_category" />
+
+                <RadioGroup
+                    android:id="@+id/rgRadiogroupnearbyprinter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_15pxv"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginBottom="@dimen/_33pxv"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbNearbyPrinter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/gray_400"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingStart="@dimen/_10pxh"
+                        android:paddingTop="@dimen/_3pxv"
+                        android:paddingBottom="@dimen/_1pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_nearby_printer"
+                        android:textColor="@color/black_900"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_13pxh"
+                        android:textStyle="normal"
+                        tools:text="@string/lbl_nearby_printer" />
+
+                    <RadioButton
+                        android:id="@+id/rbRemotePrinter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20pxh"
+                        android:buttonTint="@color/gray_400"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingStart="@dimen/_10pxh"
+                        android:paddingTop="@dimen/_2pxv"
+                        android:paddingBottom="@dimen/_1pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_remote_printer"
+                        android:textColor="@color/black_900"
+                        android:textFontWeight="400"
+                        android:textSize="@dimen/_13pxh"
+                        android:textStyle="normal"
+                        tools:text="@string/lbl_remote_printer" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtPaymentDetails"
+                style="@style/txtMontserratromanmedium16_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_marginTop="@dimen/_21pxv"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@{printerRegistrationVM.printerRegistrationModel.txtPaymentDetails}"
+                tools:text="@string/lbl_payment_details" />
+
+            <LinearLayout
+                android:id="@+id/linearColumninteractiveinpOne"
+                style="@style/groupStylecornerRadius_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etInteractiveInpOne"
+                    style="@style/etRoundedOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_17pxv"
+                    android:layout_marginEnd="@dimen/_7pxh"
+                    android:background="@drawable/rectangle_border_black_900_radius_10"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_till_number"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/_22pxh"
+                    android:paddingTop="@dimen/_21pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_20pxv"
+                    android:singleLine="true"
+                    android:text="@={printerRegistrationVM.printerRegistrationModel.etInteractiveInpOneValue}"
+                    android:textColorHint="@color/black_900_a5"
+                    tools:ignore="Autofill" />
+
+                <LinearLayout
+                    android:id="@+id/linearRowsetprintfee"
+                    style="@style/groupStyledeep_purple_500cornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8pxh"
+                    android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_marginEnd="@dimen/_7pxh"
+                    android:layout_marginBottom="@dimen/_18pxv"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtSetPrintFee"
+                        style="@style/txtMontserratromansemibold14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_107pxh"
+                        android:layout_marginTop="@dimen/_18pxv"
+                        android:layout_marginBottom="@dimen/_18pxv"
+                        android:layout_weight="0.74"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@{printerRegistrationVM.printerRegistrationModel.txtSetPrintFee}"
+                        tools:text="@string/lbl_set_print_fee" />
+
+                    <ImageView
+                        android:id="@+id/imageVector"
+                        android:layout_width="@dimen/_32pxh"
+                        android:layout_height="@dimen/_19pxh"
+                        android:layout_marginStart="@dimen/_46pxh"
+                        android:layout_marginTop="@dimen/_17pxv"
+                        android:layout_marginEnd="@dimen/_39pxh"
+                        android:layout_marginBottom="@dimen/_17pxv"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_vector"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_vector" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRegisterPrinterOne"
+                style="@style/btnSolidRoundedOutline_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7pxh"
+                android:layout_marginTop="@dimen/_93pxv"
+                android:layout_marginEnd="@dimen/_8pxh"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/msg_register_printe"
+                android:textAllCaps="false"
+                tools:text="@string/msg_register_printe" />
+        </LinearLayout>
+    </FrameLayout>
+</layout>

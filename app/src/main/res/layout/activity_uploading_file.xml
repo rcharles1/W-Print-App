@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="uploadingFileVM" type="com.example.wprintapp.modules.uploadingfile.data.viewmodel.UploadingFileVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearUploadingfile"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageHttpslottief"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_150pxh"
+            android:layout_marginEnd="@dimen/_82pxh"
+            android:layout_marginStart="@dimen/_82pxh"
+            android:layout_marginTop="@dimen/_202pxv"
+            android:layout_width="@dimen/_150pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_httpslottief_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_httpslottief_1"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtUploadingplea"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_82pxh"
+            android:layout_marginStart="@dimen/_82pxh"
+            android:layout_marginTop="@dimen/_49pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{uploadingFileVM.uploadingFileModel.txtUploadingplea}"
+            style="@style/txtMontserratromanmedium16_1" tools:text="@string/msg_uploading_plea"/>
+    </LinearLayout>
+</layout>

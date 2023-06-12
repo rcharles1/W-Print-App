@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="splashScreenStartVM" type="com.example.wprintapp.modules.splashscreenstart.data.viewmodel.SplashScreenStartVM"/>
+    </data>
+    <View android:background="@color/deep_purple_500"
+        android:id="@+id/viewSplashscreens"
+        android:layout_height="match_parent" android:layout_width="match_parent"/>
+</layout>

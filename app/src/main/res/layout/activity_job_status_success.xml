@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="jobStatusSuccessVM" type="com.example.wprintapp.modules.jobstatussuccess.data.viewmodel.JobStatusSuccessVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearJobStatusSucc"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegreen_600">
+        <ImageView android:id="@+id/imageCheckmark"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_50pxh"
+            android:layout_marginEnd="@dimen/_45pxh"
+            android:layout_marginStart="@dimen/_45pxh"
+            android:layout_marginTop="@dimen/_105pxv"
+            android:layout_width="@dimen/_50pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_checkmark_white_a700"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_white_a700"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtSuccess"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_40pxh"
+            android:layout_marginStart="@dimen/_40pxh"
+            android:layout_marginTop="@dimen/_30pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{jobStatusSuccessVM.jobStatusSuccessModel.txtSuccess}"
+            style="@style/txtMontserratromanmedium36" tools:text="@string/lbl_success"/>
+        <TextView android:ellipsize="end"
+            android:gravity="start"
+            android:id="@+id/txtYourfilehasb"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_39pxh"
+            android:layout_marginStart="@dimen/_39pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{jobStatusSuccessVM.jobStatusSuccessModel.txtYourfilehasb}"
+            style="@style/txtMontserratromanmedium14_4" tools:text="@string/msg_your_file_has_b"/>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumnprinter"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_39pxh"
+            android:layout_marginStart="@dimen/_39pxh"
+            android:layout_marginTop="@dimen/_134pxv"
+            android:layout_width="wrap_content"
+            android:orientation="vertical" style="@style/groupStylecornerRadius_1">
+            <LinearLayout android:id="@+id/linearRowprinter"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_18pxh"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrinter"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_weight="0.33"
+                    android:layout_width="wrap_content" android:singleLine="true"
+                    android:text="@{jobStatusSuccessVM.jobStatusSuccessModel.txtPrinter}"
+                    style="@style/txtMontserratromanregular14_2" tools:text="@string/lbl_printer"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCanonPIXMA"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_68pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.67"
+                    android:layout_width="wrap_content" android:singleLine="true"
+                    android:text="@{jobStatusSuccessVM.jobStatusSuccessModel.txtCanonPIXMA}"
+                    style="@style/txtMontserratromanregular14_3" tools:text="@string/lbl_canon_pixma"/>
+            </LinearLayout>
+            <View android:background="@color/black_900_33"
+                android:id="@+id/lineLineNine"
+                android:layout_height="@dimen/_2pxv"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_23pxv" android:layout_width="@dimen/_235pxh"/>
+            <LinearLayout android:id="@+id/linearRowlocation"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLocation"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_weight="0.35"
+                    android:layout_width="wrap_content" android:singleLine="true"
+                    android:text="@{jobStatusSuccessVM.jobStatusSuccessModel.txtLocation}"
+                    style="@style/txtMontserratromanregular14_2" tools:text="@string/lbl_location"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtArdhiUniversit"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_55pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.65"
+                    android:layout_width="wrap_content" android:singleLine="true"
+                    android:text="@{jobStatusSuccessVM.jobStatusSuccessModel.txtArdhiUniversit}"
+                    style="@style/txtMontserratromanregular14_3" tools:text="@string/msg_ardhi_universit"/>
+            </LinearLayout>
+            <View android:background="@color/black_900_33"
+                android:id="@+id/lineLineTen"
+                android:layout_height="@dimen/_2pxv"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_22pxv" android:layout_width="@dimen/_235pxh"/>
+            <LinearLayout android:id="@+id/linearRowfilename"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_18pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFileName"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_1pxv"
+                    android:layout_weight="0.43"
+                    android:layout_width="wrap_content" android:singleLine="true"
+                    android:text="@{jobStatusSuccessVM.jobStatusSuccessModel.txtFileName}"
+                    style="@style/txtMontserratromanregular14_2" tools:text="@string/lbl_file_name"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTestPagepdf"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_44pxh"
+                    android:layout_marginTop="@dimen/_1pxv"
+                    android:layout_weight="0.57"
+                    android:layout_width="wrap_content" android:singleLine="true"
+                    android:text="@{jobStatusSuccessVM.jobStatusSuccessModel.txtTestPagepdf}"
+                    style="@style/txtMontserratromanregular14_3" tools:text="@string/lbl_test_page_pdf"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumndone"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_39pxh"
+            android:layout_marginStart="@dimen/_150pxh"
+            android:layout_marginTop="@dimen/_139pxv"
+            android:layout_width="wrap_content"
+            android:orientation="vertical" style="@style/groupStylecornerRadius_1">
+            <TextView android:ellipsize="end" android:gravity="start"
+                android:id="@+id/txtDONE"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{jobStatusSuccessVM.jobStatusSuccessModel.txtDONE}"
+                style="@style/txtMontserratromansemibold18_1" tools:text="@string/lbl_done2"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

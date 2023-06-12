@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="paymentStatusFailedVM" type="com.example.wprintapp.modules.paymentstatusfailed.data.viewmodel.PaymentStatusFailedVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearPaymentStatus"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyledeep_orange_100">
+        <FrameLayout android:id="@+id/frameStackhttpslottief"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_185pxv"
+            android:layout_marginEnd="@dimen/_73pxh"
+            android:layout_marginStart="@dimen/_73pxh"
+            android:layout_marginTop="@dimen/_172pxv"
+            android:layout_width="@dimen/_188pxh" style="@style/groupStylecornerRadius_1">
+            <ImageView android:id="@+id/imageHttpslottief"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_185pxh"
+                android:layout_width="@dimen/_188pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_10pxh}"
+                imageRes="@{@drawable/img_httpslottief_185x188}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_httpslottief_185x188"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtPaymentFailed"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_73pxh"
+            android:layout_marginStart="@dimen/_73pxh"
+            android:layout_marginTop="@dimen/_11pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{paymentStatusFailedVM.paymentStatusFailedModel.txtPaymentFailed}"
+            style="@style/txtMontserratromansemibold24_2" tools:text="@string/lbl_payment_failed"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtPleaseconsider"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_72pxh"
+            android:layout_marginStart="@dimen/_73pxh"
+            android:layout_marginTop="@dimen/_2pxv"
+            android:layout_width="match_parent"
+            android:text="@{paymentStatusFailedVM.paymentStatusFailedModel.txtPleaseconsider}"
+            style="@style/txtMontserratromanmedium14" tools:text="@string/msg_please_consider"/>
+    </LinearLayout>
+</layout>

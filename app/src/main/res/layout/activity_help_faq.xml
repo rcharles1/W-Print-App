@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="helpFaqVM" type="com.example.wprintapp.modules.helpfaq.data.viewmodel.HelpFaqVM"/>
+    </data>
+    <FrameLayout android:id="@+id/frameHelpFAQ"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" style="@style/groupStylewhite_A700">
+        <LinearLayout android:id="@+id/linearColumnarrowleft"
+            android:layout_gravity="top|start"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_20pxh"
+            android:layout_marginStart="@dimen/_20pxh"
+            android:layout_marginTop="@dimen/_43pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginStart="@dimen/_1pxh"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearRowarrowleft"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageArrowleft"
+                        android:layout_height="@dimen/_27pxh"
+                        android:layout_marginBottom="@dimen/_3pxv"
+                        android:layout_width="@dimen/_15pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtHelpFAQ"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_77pxh"
+                        android:layout_marginTop="@dimen/_1pxv"
+                        android:layout_weight="0.89"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{helpFaqVM.helpFaqModel.txtHelpFAQ}"
+                        style="@style/txtMontserratromansemibold24" tools:text="@string/lbl_help_faq"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPrintingovera"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_26pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{helpFaqVM.helpFaqModel.txtPrintingovera}"
+                style="@style/txtMontserratromansemibold16" tools:text="@string/msg_printing_over_a"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescription"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_4pxh"
+                android:textAlignment="gravity"
+                android:layout_marginTop="@dimen/_5pxv"
+                android:layout_width="match_parent"
+                android:text="@{helpFaqVM.helpFaqModel.txtDescription}"
+                style="@style/txtMontserratromanregular14" tools:text="@string/msg_before_you_star"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtPrintingovert"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_4pxh"
+                android:layout_marginStart="@dimen/_1pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{helpFaqVM.helpFaqModel.txtPrintingovert}"
+                style="@style/txtMontserratromansemibold16" tools:text="@string/msg_printing_over_t"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDescriptionOne"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5pxh"
+                android:layout_marginTop="@dimen/_5pxv"
+                android:layout_width="match_parent"
+                android:text="@{helpFaqVM.helpFaqModel.txtDescriptionOne}"
+                style="@style/txtMontserratromanregular14" tools:text="@string/msg_this_option_may"/>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

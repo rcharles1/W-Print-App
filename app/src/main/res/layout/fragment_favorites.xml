@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="favoritesVM" type="com.example.wprintapp.modules.favorites.data.viewmodel.FavoritesVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearFavorites"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_38pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearColumnfavoriteprinte"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_19pxh"
+            android:layout_marginStart="@dimen/_19pxh"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtFavoritePrinte"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_22pxh"
+                android:layout_marginStart="@dimen/_28pxh"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{favoritesVM.favoritesModel.txtFavoritePrinte}"
+                style="@style/txtMontserratromansemibold32" tools:text="@string/msg_favorite_printe"/>
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_deep_purple_500_33_border_deep_purple_500_radius_10"
+                android:gravity="center_horizontal"
+                android:id="@+id/searchViewAdvancedsearch"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_1pxh"
+                android:layout_marginStart="@dimen/_1pxh"
+                android:layout_marginTop="@dimen/_21pxv"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewAdvancedsearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/lbl_search" app:searchIcon="@drawable/img_search"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSearchresults"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_14sp"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_22pxv"
+                android:layout_width="wrap_content"
+                android:lineSpacingExtra="@dimen/_3pxh"
+                android:singleLine="true"
+                android:text="@{favoritesVM.favoritesModel.txtSearchresults}"
+                style="@style/txtMontserratromanregular13" tools:text="@string/lbl_search_results"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerFavorites"
+                itemSpace="@{@dimen/_25pxh}"
+                android:layout_width="334dp"
+                android:layout_height="632dp"
+                android:layout_marginStart="@dimen/_2pxh"
+                android:layout_marginTop="@dimen/_26pxv"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="1"
+                tools:listitem="@layout/row_favorites" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
