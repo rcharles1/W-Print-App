@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import com.example.wprintapp.R
 import com.example.wprintapp.appcomponents.base.BaseActivity
 import com.example.wprintapp.databinding.ActivitySelectPrinterBinding
+import com.example.wprintapp.modules.home.ui.HomeFragment
 import com.example.wprintapp.modules.nearbyprinter.ui.NearbyPrinterActivity
 import com.example.wprintapp.modules.remoteprinter.ui.RemotePrinterActivity
 import com.example.wprintapp.modules.selectprinter.`data`.viewmodel.SelectPrinterVM
@@ -15,7 +16,7 @@ import kotlin.Unit
 
 class SelectPrinterActivity :
     BaseActivity<ActivitySelectPrinterBinding>(R.layout.activity_select_printer) {
-  private val viewModel: SelectPrinterVM by viewModels<SelectPrinterVM>()
+  private val viewModel: SelectPrinterVM by viewModels()
 
 
   override fun onInitialized(): Unit {

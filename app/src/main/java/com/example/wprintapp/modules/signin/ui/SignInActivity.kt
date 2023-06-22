@@ -35,27 +35,8 @@ class SignInActivity : BaseActivity<ActivitySignInBinding>(R.layout.activity_sig
 
     //Initialize Firebase Auth
     auth = Firebase.auth
-//      val text = "Don't have an existing account? Sign Up"
-//      val ss = SpannableString(text)
-//      val clickableSpan = object : ClickableSpan() {
-//          // override onClick and other methods here
-//          override fun onClick(p0: View) {
-//              val destIntent = SignUpActivity.getIntent(applicationContext, null)
-//              startActivity(destIntent)
-//          }
-//
-//          override fun updateDrawState(ds: TextPaint) {
-//              super.updateDrawState(ds)
-//              ds.color = Color.BLUE
-//              ds.isUnderlineText = false
-//          }
-//      }
-//
-//      ss.setSpan(clickableSpan,33,44, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-//      openSignUpPage.text = ss
-//      openSignUpPage.movementMethod(LinkMovementMethod.getInstance())
 
-  }
+    }
 
   override fun setUpClicks() {
     binding.btnSignIn.setOnClickListener {

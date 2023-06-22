@@ -75,32 +75,7 @@ class SignUpActivity : BaseActivity<ActivitySignUpBinding>(R.layout.activity_sig
               }
             }
 
-//          // Write a message to the database
-//          val database = Firebase.database
-//          val myRef = database.getReference("Users")
-//          val user = SignUpModel(username,emailAddress,phoneNumber,password,confirmPassword)
-//          myRef.setValue(user).addOnSuccessListener {
-//            Toast.makeText(this,"Successfully Saved", Toast.LENGTH_LONG).show()
-//            val destIntent = SignInActivity.getIntent(this, null)
-//            startActivity(destIntent)
-//          }.addOnFailureListener {
-//            Toast.makeText(this,"Failed Signing Up!" ,Toast.LENGTH_LONG).show()
-//          }
 //
-//          // Read from the database
-//          myRef.addValueEventListener(object : ValueEventListener {
-//            override fun onDataChange(dataSnapshot: DataSnapshot) {
-//              // This method is called once with the initial value and again
-//              // whenever data at this location is updated.
-//              val value = dataSnapshot.getValue<String>()
-//              Log.d(TAG, "Value is: $value")
-//            }
-//
-//            override fun onCancelled(error: DatabaseError) {
-//              // Failed to read value
-//              Log.w(TAG, "Failed to read value.", error.toException())
-//            }
-//          })
 
         }else{
           Toast.makeText(this,"Password is not matching", Toast.LENGTH_SHORT).show()

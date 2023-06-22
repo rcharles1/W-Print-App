@@ -53,6 +53,7 @@
                     android:layout_marginBottom="@dimen/_10pxv"
                     android:layout_marginEnd="@dimen/_18pxh"
                     android:layout_marginStart="@dimen/_18pxh"
+
                     android:layout_width="match_parent"
                     android:orientation="vertical" style="@style/groupStylecornerRadius_10">
                     <FrameLayout android:id="@+id/frameStacktotaldue"

@@ -61,7 +61,7 @@
                         imageRes="@{@drawable/img_ellipse3}"
                         tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse3"/>
                     <TextView android:ellipsize="end"
-                        android:id="@+id/txtStewieGriffin"
+                        android:id="@+id/txtUserName"
                         android:layout_gravity="center"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/_40pxh"
@@ -259,7 +259,7 @@
                             android:layout_width="0dp"
                             android:singleLine="true"
                             android:text="@{settingsVM.settingsModel.txtTermsofServic}"
-                            style="@style/txtMontserratromanmedium14" tools:text="@string/msg_terms_of_servic"/>
+                            style="@style/txtMontserratromanregular14" tools:text="@string/msg_terms_of_servic"/>
                         <ImageView android:id="@+id/imageArrowright"
                             android:layout_height="@dimen/_12pxh"
                             android:layout_marginBottom="@dimen/_3pxv"
@@ -291,7 +291,7 @@
                             android:layout_width="0dp"
                             android:singleLine="true"
                             android:text="@{settingsVM.settingsModel.txtAbout}"
-                            style="@style/txtMontserratromanmedium14" tools:text="@string/lbl_about2"/>
+                            style="@style/txtMontserratromanregular14" tools:text="@string/lbl_about2"/>
                         <ImageView android:id="@+id/imageArrowrightOne"
                             android:layout_height="@dimen/_12pxh"
                             android:layout_marginBottom="@dimen/_3pxv"
@@ -324,7 +324,7 @@
                             android:layout_width="0dp"
                             android:singleLine="true"
                             android:text="@{settingsVM.settingsModel.txtHelpFAQ}"
-                            style="@style/txtMontserratromanmedium14" tools:text="@string/lbl_help_faq"/>
+                            style="@style/txtMontserratromanregular14" tools:text="@string/lbl_help_faq"/>
                         <ImageView android:id="@+id/imageArrowrightTwo"
                             android:layout_height="@dimen/_12pxh"
                             android:layout_marginBottom="@dimen/_4pxv"
@@ -338,7 +338,7 @@
                 </LinearLayout>
                 <LinearLayout android:id="@+id/linearRowsignout"
                     android:layout_gravity="bottom|end"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginEnd="@dimen/_36pxh"
                     android:layout_marginStart="@dimen/_36pxh"
                     android:layout_marginTop="@dimen/_10pxv"
@@ -349,7 +349,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="@dimen/_13pxv"
                         android:layout_marginStart="@dimen/_7pxh"
-                        android:layout_marginTop="@dimen/_15pxv"
+                        android:layout_marginTop="@dimen/_10pxv"
                         android:layout_weight="0.79"
                         android:layout_width="0dp"
                         android:singleLine="true"
@@ -360,7 +360,7 @@
                         android:layout_marginBottom="@dimen/_15pxv"
                         android:layout_marginEnd="@dimen/_6pxh"
                         android:layout_marginStart="@dimen/_5pxh"
-                        android:layout_marginTop="@dimen/_15pxv"
+                        android:layout_marginTop="@dimen/_13pxv"
                         android:layout_width="@dimen/_17pxh"
                         android:scaleType="fitXY"
                         android:src="@drawable/img_maximize"
@@ -400,6 +400,7 @@
                 <ImageView android:id="@+id/imageCamera"
                     android:layout_gravity="center"
                     android:layout_height="@dimen/_27pxh"
+                    android:layout_marginTop="@dimen/_2pxv"
                     android:layout_marginBottom="@dimen/_8pxv"
                     android:layout_marginStart="@dimen/_64pxh"
                     android:layout_width="@dimen/_25pxh"

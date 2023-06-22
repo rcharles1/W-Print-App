@@ -54,13 +54,11 @@
                 android:scaleType="centerCrop" circular="@{true}"
                 imageRes="@{@drawable/img_ellipse3}"
                 tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse3"/>
-            <EditText
-                android:background="@drawable/rectangle_border_deep_purple_500_radius_11"
+            <TextView
                 android:drawablePadding="@dimen/_20pxh"
-                android:drawableStart="@drawable/img_user"
                 android:ellipsize="end"
                 android:hint="@string/lbl_stewie_griffin"
-                android:id="@+id/etFrameOne" android:inputType="text"
+                android:id="@+id/userName" android:inputType="none"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_25pxv"
                 android:layout_width="match_parent"
@@ -71,15 +69,15 @@
                 android:singleLine="true"
                 android:text="@={profileVM.profileModel.etFrameOneValue}"
                 android:textColorHint="@color/black_900"
-                style="@style/etRoundedOutline_2" tools:ignore="Autofill"/>
-            <EditText
+                style="@style/etRoundedOutline_2" tools:ignore="Autofill"
+                app:drawableStartCompat="@drawable/img_user" />
+            <TextView
                 android:background="@drawable/rectangle_border_deep_purple_500_radius_11"
                 android:drawablePadding="@dimen/_17pxh"
-                android:drawableStart="@drawable/img_mail"
                 android:ellipsize="end"
                 android:hint="@string/msg_stewiegriffin_g"
                 android:id="@+id/etEmail"
-                android:inputType="textEmailAddress"
+                android:inputType="none"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_23pxv"
                 android:layout_width="match_parent"
@@ -90,14 +88,14 @@
                 android:singleLine="true"
                 android:text="@={profileVM.profileModel.etEmailValue}"
                 android:textColorHint="@color/black_900"
-                style="@style/etRoundedOutline_2" tools:ignore="Autofill"/>
-            <EditText
+                style="@style/etRoundedOutline_2" tools:ignore="Autofill,TextFields"
+                app:drawableStartCompat="@drawable/img_mail" />
+            <TextView
                 android:background="@drawable/rectangle_border_deep_purple_500_radius_11"
                 android:drawablePadding="@dimen/_18pxh"
-                android:drawableStart="@drawable/img_call"
                 android:ellipsize="end"
                 android:hint="@string/lbl_0768047808"
-                android:id="@+id/etMobileNo" android:inputType="phone"
+                android:id="@+id/etMobileNo" android:inputType="none"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_23pxv"
                 android:layout_width="match_parent"
@@ -108,14 +106,15 @@
                 android:singleLine="true"
                 android:text="@={profileVM.profileModel.etMobileNoValue}"
                 android:textColorHint="@color/black_900"
-                style="@style/etRoundedOutline_2" tools:ignore="Autofill"/>
-            <EditText
+                style="@style/etRoundedOutline_2" tools:ignore="Autofill"
+                app:drawableStartCompat="@drawable/img_call" />
+            <TextView
                 android:background="@drawable/rectangle_border_deep_purple_500_radius_11"
                 android:drawablePadding="@dimen/_20pxh"
-                android:drawableStart="@drawable/img_lock"
                 android:ellipsize="end" android:hint="@string/lbl2"
                 android:id="@+id/etPassword"
-                android:inputType="textPassword"
+                android:inputType="none"
+                android:gravity="center_vertical"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_23pxv"
                 android:layout_width="match_parent"
@@ -126,26 +125,46 @@
                 android:singleLine="true"
                 android:text="@={profileVM.profileModel.etPasswordValue}"
                 android:textColorHint="@color/black_900"
-                style="@style/etRoundedOutline_2" tools:ignore="Autofill"/>
-            <EditText
-                android:background="@drawable/rectangle_border_deep_purple_500_radius_11"
-                android:drawableEnd="@drawable/img_plusbox"
-                android:drawablePadding="@dimen/_30pxh"
-                android:drawableStart="@drawable/img_printer"
-                android:ellipsize="end"
-                android:hint="@string/lbl_printers_owned"
-                android:id="@+id/etFrameSix" android:inputType="text"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_23pxv"
+                style="@style/etRoundedOutline_2" tools:ignore="Autofill,TextFields"
+                app:drawableStartCompat="@drawable/img_lock" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:paddingBottom="@dimen/_14pxv"
-                android:paddingEnd="@dimen/_20pxh"
-                android:paddingStart="@dimen/_15pxh"
-                android:paddingTop="@dimen/_15pxv"
-                android:singleLine="true"
-                android:text="@={profileVM.profileModel.etFrameSixValue}"
-                android:textColorHint="@color/black_900"
-                style="@style/etRoundedOutline_3" tools:ignore="Autofill"/>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:background="@drawable/rectangle_border_deep_purple_500_radius_11"
+                    android:drawablePadding="@dimen/_30pxh"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_printers_owned"
+                    android:id="@+id/etFrameSix" android:inputType="none"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_23pxv"
+                    android:layout_width="270dp"
+                    android:paddingBottom="@dimen/_14pxv"
+                    android:paddingEnd="@dimen/_20pxh"
+                    android:paddingStart="@dimen/_15pxh"
+                    android:paddingTop="@dimen/_15pxv"
+                    android:singleLine="true"
+                    android:text="@={profileVM.profileModel.etFrameSixValue}"
+                    android:textColorHint="@color/black_900"
+                    style="@style/etRoundedOutline_3" tools:ignore="Autofill"
+                    app:drawableStartCompat="@drawable/img_printer" />
+
+                <ImageView
+                    android:id="@+id/addImageView"
+                    android:layout_width="@dimen/_45pxh"
+                    android:layout_height="@dimen/_50pxh"
+                    android:layout_marginTop="@dimen/_23pxv"
+                    android:paddingEnd="@dimen/_2pxh"
+                    android:layout_marginStart="0dp"
+                    app:srcCompat="@drawable/img_plusbox"
+                    tools:ignore="RtlSymmetry"
+                    style="@style/etRoundedOutline_3"/>
+
+            </LinearLayout>
+
         </LinearLayout>
     </FrameLayout>
 </layout>

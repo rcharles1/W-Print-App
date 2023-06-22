@@ -20,6 +20,9 @@ data class PrinterRegistrationModel(
   /**
    * TODO Replace with dynamic value
    */
+  var txtCategoryInfo: String? = MyApp.getInstance().resources.getString(R.string.lbl_category_info)
+  ,
+
   var txtCategory: String? = MyApp.getInstance().resources.getString(R.string.lbl_category)
   ,
   /**

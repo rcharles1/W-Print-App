@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -99,13 +100,10 @@
             android:name=".modules.paymentdetails.ui.PaymentDetailsActivity"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".modules.printfee.ui.PrintFeeActivity"
-            android:screenOrientation="fullSensor" />
-        <activity
             android:name=".modules.terms.ui.TermsActivity"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".modules.nearbyprinter.ui.NearbyPrinterActivity"
+            android:name="com.example.wprintapp.modules.nearbyprinter.ui.NearbyPrinterActivity"
             android:screenOrientation="fullSensor" />
         <activity
             android:name=".modules.profile.ui.ProfileActivity"

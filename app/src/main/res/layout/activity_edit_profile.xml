@@ -81,26 +81,28 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/img_frame3"
                 tools:ignore="ContentDescription" tools:src="@drawable/img_frame3"/>
+
             <EditText
-                android:background="@drawable/rectangle_border_deep_purple_500_radius_11"
-                android:drawablePadding="@dimen/_30pxh"
-                android:drawableStart="@drawable/img_lock"
-                android:ellipsize="end"
-                android:hint="@string/lbl_reset_password3"
                 android:id="@+id/etLanguage"
-                android:inputType="textPassword"
+                style="@style/etRoundedOutline_2"
+                android:layout_width="@dimen/_320pxh"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_1pxh"
                 android:layout_marginTop="@dimen/_34pxv"
-                android:layout_width="match_parent"
-                android:paddingBottom="@dimen/_16pxv"
-                android:paddingEnd="@dimen/_30pxh"
+                android:background="@drawable/rectangle_border_deep_purple_500_radius_11"
+                android:drawableStart="@drawable/img_lock"
+                android:drawablePadding="@dimen/_30pxh"
+                android:ellipsize="end"
+                android:hint="@string/lbl_reset_password3"
+                android:inputType="textPassword"
                 android:paddingStart="@dimen/_20pxh"
                 android:paddingTop="@dimen/_13pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingBottom="@dimen/_16pxv"
                 android:singleLine="true"
                 android:text="@={editProfileVM.editProfileModel.etLanguageValue}"
                 android:textColorHint="@color/black_900"
-                style="@style/etRoundedOutline_2" tools:ignore="Autofill"/>
+                tools:ignore="Autofill" />
             <androidx.appcompat.widget.AppCompatButton
                 android:ellipsize="end" android:gravity="center"
                 android:id="@+id/btnSaveChanges"

@@ -38,7 +38,7 @@ class FilePreviewActivity : BaseActivity<ActivityFilePreviewBinding>(R.layout.ac
     startActivityForResult(Intent.createChooser(browseStorage,"Select PDF"),PDF_SELECTION_CODE)
   }
 
-  fun showPdfFromUri(uri:Uri?){
+  private fun showPdfFromUri(uri:Uri?){
     pdfView.fromUri(uri)
       .defaultPage(0)
       .spacing(10)

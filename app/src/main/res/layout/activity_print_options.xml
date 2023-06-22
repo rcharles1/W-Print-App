@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--suppress ALL -->
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
     <data>
@@ -20,7 +21,8 @@
             android:layout_marginTop="@dimen/_40pxv"
             android:layout_marginEnd="@dimen/_20pxh"
             android:layout_marginBottom="@dimen/_20pxv"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbarToolbar"
@@ -146,16 +148,17 @@
                             android:text="@{printOptionsVM.printOptionsModel.txtCopies}"
                             tools:text="@string/lbl_copies" />
 
-                        <androidx.appcompat.widget.AppCompatButton
+                        <EditText
                             android:id="@+id/btnOne"
-                            style="@style/btnRoundedOutline_1"
+                            style="@style/btnRoundedOutline_2"
                             android:layout_width="@dimen/_43pxh"
                             android:layout_height="@dimen/_47pxh"
                             android:layout_marginStart="@dimen/_13pxh"
                             android:ellipsize="end"
-                            android:gravity="center"
+                            android:inputType="number"
+                            android:gravity="center|center_vertical"
                             android:paddingStart="@dimen/_18pxh"
-                            android:paddingTop="@dimen/_1pxv"
+                            android:paddingTop="@dimen/_2pxv"
                             android:paddingEnd="@dimen/_19pxh"
                             android:paddingBottom="@dimen/_15pxv"
                             android:singleLine="true"
@@ -204,25 +207,46 @@
                             android:text="@{printOptionsVM.printOptionsModel.txtPaperOrientati}"
                             tools:text="@string/msg_paper_orientati" />
 
-                        <EditText
-                            android:id="@+id/etOrientationDro"
-                            style="@style/etSolidRoundedOutline_3"
-                            android:layout_width="0dp"
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                            android:layout_width="190dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_39pxh"
-                            android:layout_weight="0.67"
-                            android:background="@drawable/rectangle_bg_white_a700_border_bluegray_101_radius_10"
-                            android:ellipsize="end"
-                            android:hint="@string/lbl_portrait"
-                            android:inputType="text"
-                            android:paddingStart="@dimen/_10pxh"
-                            android:paddingTop="@dimen/_13pxv"
-                            android:paddingEnd="@dimen/_30pxh"
-                            android:paddingBottom="@dimen/_15pxv"
-                            android:singleLine="true"
-                            android:text="@={printOptionsVM.printOptionsModel.etOrientationDroValue}"
-                            android:textColorHint="@color/black_900"
-                            tools:ignore="Autofill" />
+                            android:focusableInTouchMode="true">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/auto_complete"
+                                android:layout_width="190dp"
+                                android:layout_height="match_parent"
+                                android:paddingStart="@dimen/_15pxh"
+                                android:hint="@string/lbl_portrait"
+                                android:layout_weight="1"
+                                android:background="@drawable/custom_stroke"
+                                android:inputType="none"
+                                tools:ignore="RtlSymmetry"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                        <!--                        <EditText-->
+<!--                            android:id="@+id/etOrientationDro"-->
+<!--                            style="@style/etSolidRoundedOutline_3"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_39pxh"-->
+<!--                            android:layout_weight="0.67"-->
+<!--                            android:background="@drawable/rectangle_bg_white_a700_border_bluegray_101_radius_10"-->
+<!--                            android:ellipsize="end"-->
+<!--                            android:hint="@string/lbl_portrait"-->
+<!--                            android:inputType="text"-->
+<!--                            android:paddingStart="@dimen/_10pxh"-->
+<!--                            android:paddingTop="@dimen/_13pxv"-->
+<!--                            android:paddingEnd="@dimen/_30pxh"-->
+<!--                            android:paddingBottom="@dimen/_15pxv"-->
+<!--                            android:singleLine="true"-->
+<!--                            android:text="@={printOptionsVM.printOptionsModel.etOrientationDroValue}"-->
+<!--                            android:textColorHint="@color/black_900"-->
+<!--                            tools:ignore="Autofill" />-->
                     </LinearLayout>
 
                     <LinearLayout
@@ -246,21 +270,38 @@
                             android:singleLine="true"
                             android:text="@{printOptionsVM.printOptionsModel.txtPaperSize}"
                             tools:text="@string/lbl_paper_size" />
-
-                        <TextView
-                            android:id="@+id/txtPaperSizeOne"
-                            style="@style/txtSolidRoundedOutline"
-                            android:layout_width="0dp"
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                            android:layout_width="190dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_40pxh"
-                            android:layout_weight="0.68"
-                            android:ellipsize="end"
-                            android:paddingStart="@dimen/_10pxh"
-                            android:paddingTop="@dimen/_14pxv"
-                            android:paddingBottom="@dimen/_14pxv"
-                            android:singleLine="true"
-                            android:text="@{printOptionsVM.printOptionsModel.txtPaperSizeOne}"
-                            tools:text="@string/lbl_a4" />
+                            android:focusableInTouchMode="true">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/auto_complete2"
+                                android:layout_width="190dp"
+                                android:layout_height="match_parent"
+                                android:paddingStart="@dimen/_15pxh"
+                                android:hint="@string/lbl_paperSize"
+                                android:layout_weight="1"
+                                android:background="@drawable/custom_stroke"
+                                android:inputType="none"
+                                tools:ignore="RtlSymmetry"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/txtPaperSizeOne"-->
+<!--                            style="@style/txtSolidRoundedOutline"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_40pxh"-->
+<!--                            android:layout_weight="0.68"-->
+<!--                            android:ellipsize="end"-->
+<!--                            android:paddingStart="@dimen/_10pxh"-->
+<!--                            android:paddingTop="@dimen/_14pxv"-->
+<!--                            android:paddingBottom="@dimen/_14pxv"-->
+<!--                            android:singleLine="true"-->
+<!--                            android:text="@{printOptionsVM.printOptionsModel.txtPaperSizeOne}"-->
+<!--                            tools:text="@string/lbl_a4" />-->
                     </LinearLayout>
 
                     <LinearLayout
@@ -285,25 +326,44 @@
                             android:text="@{printOptionsVM.printOptionsModel.txtPrintoutColor}"
                             tools:text="@string/lbl_printout_color" />
 
-                        <EditText
-                            android:id="@+id/etColor"
-                            style="@style/etSolidRoundedOutline_3"
-                            android:layout_width="0dp"
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                            android:layout_width="190dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_17pxh"
-                            android:layout_weight="0.62"
-                            android:background="@drawable/rectangle_bg_white_a700_border_bluegray_101_radius_10"
-                            android:ellipsize="end"
-                            android:hint="@string/lbl_colored"
-                            android:inputType="text"
-                            android:paddingStart="@dimen/_10pxh"
-                            android:paddingTop="@dimen/_14pxv"
-                            android:paddingEnd="@dimen/_30pxh"
-                            android:paddingBottom="@dimen/_14pxv"
-                            android:singleLine="true"
-                            android:text="@={printOptionsVM.printOptionsModel.etColorValue}"
-                            android:textColorHint="@color/black_900"
-                            tools:ignore="Autofill" />
+                            android:focusableInTouchMode="true">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/auto_complete3"
+                                android:layout_width="190dp"
+                                android:layout_height="match_parent"
+                                android:paddingStart="@dimen/_15pxh"
+                                android:hint="@string/color_hint"
+                                android:layout_weight="1"
+                                android:background="@drawable/custom_stroke"
+                                android:inputType="none"
+                                tools:ignore="RtlSymmetry"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <!--                        <EditText-->
+<!--                            android:id="@+id/etColor"-->
+<!--                            style="@style/etSolidRoundedOutline_3"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginStart="@dimen/_17pxh"-->
+<!--                            android:layout_weight="0.62"-->
+<!--                            android:background="@drawable/rectangle_bg_white_a700_border_bluegray_101_radius_10"-->
+<!--                            android:ellipsize="end"-->
+<!--                            android:hint="@string/lbl_colored"-->
+<!--                            android:inputType="text"-->
+<!--                            android:paddingStart="@dimen/_10pxh"-->
+<!--                            android:paddingTop="@dimen/_14pxv"-->
+<!--                            android:paddingEnd="@dimen/_30pxh"-->
+<!--                            android:paddingBottom="@dimen/_14pxv"-->
+<!--                            android:singleLine="true"-->
+<!--                            android:text="@={printOptionsVM.printOptionsModel.etColorValue}"-->
+<!--                            android:textColorHint="@color/black_900"-->
+<!--                            tools:ignore="Autofill" />-->
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -314,7 +374,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_4pxh"
-                android:layout_marginTop="@dimen/_69pxv"
+                android:layout_marginTop="@dimen/_50pxv"
                 android:ellipsize="end"
                 android:gravity="center"
                 android:lineSpacingExtra="@dimen/_4pxh"

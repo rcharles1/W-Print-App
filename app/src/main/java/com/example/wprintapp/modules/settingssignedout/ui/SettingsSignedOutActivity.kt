@@ -1,5 +1,8 @@
 package com.example.wprintapp.modules.settingssignedout.ui
 
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import androidx.activity.viewModels
 import com.example.wprintapp.R
 import com.example.wprintapp.appcomponents.base.BaseActivity
@@ -8,6 +11,7 @@ import com.example.wprintapp.modules.about.ui.AboutActivity
 import com.example.wprintapp.modules.editprofile.ui.EditProfileActivity
 import com.example.wprintapp.modules.helpfaq.ui.HelpFaqActivity
 import com.example.wprintapp.modules.profile.ui.ProfileActivity
+import com.example.wprintapp.modules.settings.ui.SettingsActivity
 import com.example.wprintapp.modules.settingssignedout.`data`.viewmodel.SettingsSignedOutVM
 import com.example.wprintapp.modules.terms.ui.TermsActivity
 import kotlin.String
@@ -48,5 +52,10 @@ class SettingsSignedOutActivity :
   companion object {
     const val TAG: String = "SETTINGS_SIGNED_OUT_ACTIVITY"
 
-  }
+    fun getIntent(context: Context, bundle: Bundle?): Intent {
+      val destIntent = Intent(context, SettingsSignedOutActivity::class.java)
+      destIntent.putExtra("bundle", bundle)
+      return destIntent
+    }}
+
 }

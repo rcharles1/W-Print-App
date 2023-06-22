@@ -10,8 +10,11 @@ import androidx.activity.viewModels
 import com.example.wprintapp.R
 import com.example.wprintapp.appcomponents.base.BaseActivity
 import com.example.wprintapp.databinding.ActivitySplashScreenEndBinding
+import com.example.wprintapp.modules.homecontainer.ui.HomeContainerActivity
 import com.example.wprintapp.modules.signin.ui.SignInActivity
 import com.example.wprintapp.modules.splashscreenend.data.viewmodel.SplashScreenEndVM
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import kotlin.String
 import kotlin.Unit
 
@@ -23,13 +26,23 @@ class SplashScreenEndActivity :
   override fun onInitialized(): Unit {
     viewModel.navArguments = intent.extras?.getBundle("bundle")
     binding.splashScreenEndVM = viewModel
-    Handler(Looper.getMainLooper()).postDelayed( {
-      val destIntent = SignInActivity.getIntent(this, null)
-//      destIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-      startActivity(destIntent)
-      finish()
-    }, 1500)
-  }
+
+    val user = Firebase.auth.currentUser
+
+    if (user != null) {
+      // User is already signed in, allow them to continue using the app
+      val i = HomeContainerActivity.getIntent(this, null)
+      startActivity(i)
+    } else {
+
+      // No user is signed in, show the login screen
+        val destIntent = SignInActivity.getIntent(this, null)
+        startActivity(destIntent)
+        finish() //Prevents splash screen from being included in app's back stack.
+      }
+    }
+
+
 
   override fun setUpClicks(): Unit {
   }

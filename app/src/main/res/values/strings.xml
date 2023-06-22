@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
     <string name="app_name">W-Print</string>
+    <string-array name="orientation">
+        <item>Portrait</item>
+        <item>Landscape</item>
+    </string-array>
+    <string-array name="paper_size">
+        <item>A1</item>
+        <item>A2</item>
+        <item>A3</item>
+        <item>A4</item>
+        <item>Letter-Size</item>
+    </string-array>
+    <string-array name="color">
+        <item>B&amp;W</item>
+        <item>Colored</item>
+    </string-array>
+
+    <string name="color_hint">Colored</string>
+    <string name="colored_cost">Colored</string>
     <string name="loading">Loading…</string>
     <string name="no_internet_connection">No internet connection!</string>
     <string name="lbl_print_options">Print Options</string>
@@ -17,7 +35,6 @@
     <string name="lbl2">*********</string>
     <string name="lbl_reset_password">Reset Password</string>
     <string name="lbl_phone">Phone </string>
-
     <string name="lbl_otp">OTP</string>
     <string name="lbl_home">Home</string>
     <string name="lbl_about">About  </string>
@@ -72,7 +89,8 @@
     <string name="lbl_help_faq">Help / FAQ</string>
     <string name="lbl_try_again">TRY AGAIN</string>
     <string name="lbl_about2">About</string>
-    <string name="lbl_portrait">Portrait</string>
+    <string name="lbl_portrait">Paper Orientation</string>
+    <string name="lbl_paperSize">Paper Size</string>
     <string name="lbl_wlan_name_ssid">WLAN Name(SSID)</string>
     <string name="msg_already_have_an2">Already have an account?</string>
     <string name="lbl_printers_owned">Printers Owned</string>
@@ -86,7 +104,7 @@
     <string name="msg_save_print_opti">Save Print Options</string>
     <string name="lbl_password">Password</string>
     <string name="msg_all_print_jobs">All print jobs that you have carried out. Successful print jobs are denoted with a green tick whilst unsuccessful ones are denoted by a red-cross.</string>
-    <string name="lbl_send_code">Send Code</string>
+    <string name="lbl_send_Email">Send Email</string>
     <string name="msg_location_addres">Location Address </string>
     <string name="msg_allow_fetch_to">Allow fetch to send push notifications to your device.</string>
     <string name="lbl_login_here">Login Here</string>
@@ -101,6 +119,7 @@ To use this feature, you must be a registered user.</string>
     <string name="lbl_canon_pixma">Canon PIXMA</string>
     <string name="lbl_boomstationary2">\@boomstationary</string>
     <string name="lbl_category">Category</string>
+    <string name="lbl_category_info">Tap and hold Nearby Printer to add more details.</string>
     <string name="lbl_b_white">B/White</string>
     <string name="lbl_letter_size">Letter-Size</string>
     <string name="msg_unfortunately_t">Unfortunately the attempt to printing was unsuccessful.</string>

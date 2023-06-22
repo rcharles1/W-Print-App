@@ -34,10 +34,7 @@ class ResetForgottenPasswordOneActivity :
       val email = binding.etUserEmail
       compareEmail(email)
     }
-    binding.btnVerifyCode.setOnClickListener {
-      val destIntent = CreateNewPasswordActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
+
     binding.imageArrowleft.setOnClickListener {
       finish()
     }
